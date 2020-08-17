@@ -1,4 +1,5 @@
 # System-Monitor
+Write a Linux system monitor with similar functionality to the widely used htop application.
 
 ## To setup and compile in Udacity Ubuntu workspace:
 
