@@ -1,28 +1,23 @@
-# System-Monitor
-Write a Linux system monitor with similar functionality to the widely used htop application.
+# Linux System Monitor
 
-## To setup and compile in Udacity Ubuntu workspace:
+## Prerequisites and Dependencies
+[ncurses](https://www.gnu.org/software/ncurses/) is a library that facilitates text-based graphical output in the terminal. This project relies on ncurses for display output.
 
-1. Clone repository into `/home/workspace/`
-```
-cd /home/workspace/
-git clone https://github.com/udacity/CppND-System-Monitor
-```
-2. Follow along with the lesson and make sure you complete the `ProcessParser` and `Process` classes before attempting to run the project.
+To nstall ncurses within your own Linux environment: `sudo apt install libncurses5-dev libncursesw5-dev`
 
-3. Install `ncurses` package
-```
-sudo apt-get install libncurses5-dev libncursesw5-dev
-```
-4. Compile and run
-```
-g++ -std="c++17" main.cpp -lncurses
-./a.out
-```
-5. In case of error that looks like the following: 
-```
-root@77e30fca8a01:/home/workspace/CppND-Object-Oriented# ./a.out
-*** %n in writable segment detected ***
-                                      Aborted (core dumped)
-```
-just keep trying `./a.out` and it should work eventually!
+## Installation and Setup
+
+1. Clone the project repository: `git clone https://github.com/udacity/CppND-System-Monitor-Project-Updated.git`
+
+2. Build the project: `make build`
+
+3. Run the resulting executable: `./build/monitor`
+
+## Contributing Authors
+
+C. Tyler Dennis  
+Udacity
+
+## Licensing
+
+This project is released under the [MIT License](https://opensource.org/licenses/MIT)
