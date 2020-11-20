@@ -20,6 +20,7 @@ using std::string;
 using std::to_string;
 using std::vector;
 
+// An example of how to read data from the filesystem
 string LinuxParser::OperatingSystem() {
     string line;
     string key;
@@ -45,6 +46,7 @@ string LinuxParser::OperatingSystem() {
     }
 }
 
+// An example of how to read data from the filesystem
 string LinuxParser::Kernel() {
     string os, version, kernel;
     string line;
@@ -60,6 +62,7 @@ string LinuxParser::Kernel() {
     }
 }
 
+// Update this to use std::filesystem
 vector<int> LinuxParser::Pids() {
     vector<int> pids;
     DIR* directory = opendir(kProcDirectory.c_str());
@@ -77,6 +80,7 @@ vector<int> LinuxParser::Pids() {
     return pids;
 }
 
+// Read and return the system memory utilization
 float LinuxParser::MemoryUtilization() {
     string category, kilobyte_string, mem_total_string, mem_free_string;
     string line;
@@ -107,10 +111,12 @@ float LinuxParser::MemoryUtilization() {
     }
 }
 
+
 float LinuxParser::CpuUtilization() {
     return 0;
 } 
 
+// Read and return the system uptime
 long LinuxParser::UpTime() {
     string line;
     string up_string, idle_string;
@@ -129,6 +135,7 @@ long LinuxParser::UpTime() {
     }
 }
 
+// Read and return the number of jiffies for the system
 long LinuxParser::Jiffies() {
     string line;
     string cpu, user, nice, system, idle, iowait, irq, softirq, steal, guest, guest_nice;
@@ -149,6 +156,7 @@ long LinuxParser::Jiffies() {
     }
 }
 
+// Read and return the number of active jiffies for the system
 long LinuxParser::ActiveJiffies() {
     string line;
     string cpu, user, nice, system, idle, iowait, irq, softirq, steal, guest, guest_nice;
@@ -168,6 +176,7 @@ long LinuxParser::ActiveJiffies() {
     }
 }
 
+// Read and return the number of idle jiffies for the system
 long LinuxParser::IdleJiffies() {
     string line;
     string cpu, user, nice, system, idle, iowait, irq, softirq, steal, guest, guest_nice;
@@ -187,6 +196,7 @@ long LinuxParser::IdleJiffies() {
     }
 }
 
+// Read and return the total number of processes
 int LinuxParser::TotalProcesses() {
     string line;
     string key;
