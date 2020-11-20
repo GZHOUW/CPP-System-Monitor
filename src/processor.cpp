@@ -3,6 +3,9 @@
 
 #include <iostream>
 
+// Return the aggregate CPU utilization
+// Go to /proc/stat there will be 4 CPUs, only look at the aggregate CPU info
+// Calculate CPU active time / total time passed 
 float Processor::Utilization() { 
     long total, prev_total, total_delta, idle_delta;
     float usage_percentage;
